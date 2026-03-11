@@ -75,7 +75,7 @@ landing-wallet/
 ## ⚙️ Запуск проекта
 
 ```bash
-git clone https://github.com/username/landing-wallet.git
+git clone https://github.com/xamiuez/landing-wallet.git
 cd landing-wallet
 ```
 
