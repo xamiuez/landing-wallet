@@ -1,0 +1,16 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin text-format($font-family: "Poppins-Regular", $font-weight: 400, $font-style: normal, $font-size: 1rem, $line-height: normal, $color: #FFF) {
+    font: {
+        family: $font-family;
+        weight: $font-weight;
+        size: $font-size;
+    }
+    font-style: $font-style;
+    line-height: $line-height;
+    color: $color;
+}

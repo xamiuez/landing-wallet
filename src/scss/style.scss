@@ -1,0 +1,341 @@
+@import "_reset.scss";
+@import "_variables.scss";
+@import "_mixins.scss";
+
+* {
+    box-sizing: border-box;
+}
+html {
+    background-color: #2B2B2B;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1280px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+// ==================== PAGE 1 ====================
+.main-section {
+    padding-block: 30px 60px;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 70px;
+    }
+
+    &__logo {
+        height: 34px;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: clamp(1.25rem, -2.22rem + 9.66vw, 5.625rem);
+    }
+
+    &__item {
+        @include text-format($font-family: "Poppins-Regular", $font-weight: 400, $font-style: normal, $font-size: clamp(1.125rem, 0.828rem + 0.83vw, 1.4rem), $line-height: normal);
+    }
+
+    &__link--white {
+        color: $color-white;
+    }
+
+    &__content-container {
+        display: flex;
+        gap: 8vw;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 0.6em 2em;
+
+    @include text-format($font-family: "Poppins-Regular", $font-weight: 400, $font-style: normal, $font-size: clamp(1.125rem, 0.828rem + 0.83vw, 1.4rem), $line-height: normal, $color: $color-lightgray);
+
+    transition: all 0.2s ease 0s;
+
+    // для текста???
+    &--bg-purple {
+        background-color: #BFAFF2;
+
+        &:hover {
+            background-color: #a28fdd;
+            transform: translateY(-0.25rem);
+        }
+    }
+
+    &--bg-yellow {
+        background-color: #F8D57E;
+
+        &:hover {
+            background-color: #d8b764;
+            transform: translateY(-0.25rem);
+        }
+    }
+
+}
+
+.title {
+    @include text-format($font-family: "Poppins-SemiBold", $font-weight: 600, $font-style: normal, $font-size: clamp(1.5rem, 1.5rem + 1vw, 3.75rem), $line-height: 1.2em, $color: $color-white);
+}
+
+.left-wrapper {
+    width: 45%;
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    &__text {
+        @include text-format($font-family: "Poppins-Regular", $font-weight: 400, $font-style: normal, $font-size: clamp(0.875rem, 0.875rem + 0.5vw, 1rem), $line-height: 1.3em, $color: #808080);
+        margin-bottom: 70px;
+    }
+}
+
+.right-wrapper {
+    background-color: $color-lightgray;
+    border-radius: 1rem;
+    @include flex-center;
+
+    &__diagram {
+        width: 90%;
+    }
+}
+
+// ==================== PAGE 2 ====================
+
+.section-preview {
+    margin-bottom: 100px;
+
+    &__content-container {
+        display: flex;
+        flex-direction: column;
+        gap: 7vh;
+        align-items: center;
+    }
+
+    &__top {
+        @include flex-center;
+    }
+
+    &__bottom {
+        margin-inline: auto;
+        width: 1000px;
+        height: 500px;
+        background-color: #FDF5DF;
+        border-radius: 1rem;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    &__app-image {
+        display: block;
+        max-height: 100%;
+        width: 100%;
+        height: auto;
+    }
+
+    &__logos-image {
+        width: 95%;
+        height: auto;
+    }
+}
+
+
+// ==================== PAGE 3 ====================
+.section-feedback {
+    margin-bottom: 4rem;
+
+    &__top {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 70px;
+    }
+
+    &__icon-box {
+        width: 235px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__icon {
+        margin-bottom: 32px;
+    }
+
+    &__title {
+        @include text-format($font-family: "Poppins-SemiBold", $font-weight: 600, $font-style: normal, $font-size: clamp(0.8rem, 0.6rem + 1vw, 1.3rem), $line-height: 1.2em, $color: white);
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        @include text-format($font-family: "Poppins-Regular", $font-weight: 400, $font-style: normal, $font-size: clamp(0.6rem, 0.6rem + 1vw, 1rem), $line-height: 1.2em, $color: #555);
+        text-align: center;
+    }
+
+    &__feedback-block {
+        margin-inline: auto;
+        width: 80vw;
+        min-height: 21.875rem;
+        background-color: #BFAFF2;
+        border-radius: 30px;
+        padding: 80px 162px 0 162px;
+    }
+
+    &__feedback-text {
+        @include text-format($font-family: "Poppins-SemiBold", $font-weight: 600, $font-style: normal, $font-size: clamp(1rem, 1rem + 0.2vw, 1.4rem), $line-height: 2em, $color: #2B2B2B);
+        margin-bottom: 1.4em;
+    }
+
+    &__author-container {
+        display: flex;
+        align-items: center;
+    }
+
+    &__author-image {
+        margin-right: 20px;
+    }
+
+
+    &__author-name {
+        @include text-format($font-family: "Poppins-Regular", $font-weight: 400, $font-style: normal, $font-size: clamp(0.6rem, 0.6rem + 1vw, 0.95rem), $line-height: 1.2em, $color: #2B2B2B);
+    }
+
+    &__stars-container {
+        display: flex;
+        gap: 5px;
+    }
+
+    &__star-icon {
+        height: 20px;
+    }
+}
+
+// ==================== SUPPORT SECTION ====================
+.section-support {
+
+    &__content-container {
+        display: flex;
+        align-items: center;
+        column-gap: 15rem;
+    }
+
+    &__left-wrapper{
+        margin-bottom: 2rem;
+    }
+    &__right-wrapper {
+        aspect-ratio: 500 / 400;
+    }
+
+    &__gif {
+        border-radius: 2rem;
+        height: 70%;
+        width: 70%;
+        object-fit: fill;
+    }
+
+    &__title {
+        @include text-format($font-family: "Poppins-SemiBold", $font-weight: 600, $font-style: normal, $font-size: clamp(1.5rem, 1.5rem + 1vw, 3.75rem), $line-height: 1.2em, $color: $color-white);
+        margin-bottom: 50px;
+    }
+
+    &__text {
+        @include text-format($font-family: "Poppins-Regular", $font-weight: 400, $font-style: normal, $font-size: clamp(0.875rem, 0.875rem + 0.5vw, 1rem), $line-height: 1.3em, $color: #808080);
+        margin-bottom: 50px;
+    }
+}
+
+.footer {
+    padding-block: 3rem;
+
+    &__container {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__logo {
+        margin-bottom: 45px;
+    }
+
+    &__nav-menu {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__item {
+        @include text-format($font-family: "Poppins-SemiBold", $font-weight: 600, $font-style: normal, $font-size: clamp(0.5rem, 0.5rem + 0.5vw, 1rem), $line-height: 1.2em, $color: $color-white);
+    }
+
+    &__right-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    &__text {
+        @include text-format($font-family: "Poppins-Regular", $font-weight: 400, $font-style: normal, $font-size: clamp(0.8rem, 0.8rem + 0.5vw, 1.125rem), $line-height: 1.3em, $color: $color-white);
+    }
+
+    &__button-block {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+}
+
+.form {
+    &__input {
+        display: inline-block;
+        width: 200px;
+        height: 50px;
+        background-color: #333;
+        border: none;
+        outline: none;
+        padding: 15px 30px;
+        border-radius: 1rem;
+        @include text-format($font-family: "Poppins-Regular", $font-weight: 400, $font-style: normal, $font-size: clamp(1rem, 0.828rem + 0.83vw, 1rem), $line-height: normal, $color: #858585);
+
+        &::placeholder {
+            @include text-format($font-family: "Poppins-Regular", $font-weight: 400, $font-style: normal, $font-size: clamp(1rem, 0.828rem + 0.83vw, 1rem), $line-height: normal, $color: #858585);
+        }
+
+        &:focus {
+            outline: 3px solid #BFAFF2;
+        }
+
+    }
+}
+
+.send-button {
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    padding: 15px 30px;
+    background-color: #BFAFF2;
+    @include flex-center;
+
+    @include text-format($font-family: "Poppins-Regular", $font-weight: 400, $font-style: normal, $font-size: clamp(1rem, 0.828rem + 0.83vw, 1rem), $line-height: normal, $color: $color-lightgray);
+        transition: all 0.2s ease 0s;
+
+    &:hover {
+        background-color: #a28fdd;
+        transform: translateY(-0.25rem);
+    }
+}
+
+@import "_relative.scss";

@@ -1,0 +1,15 @@
+$color-white: #FFF;
+$color-lightgray: #333;
+
+@font-face{
+    font-family: "Poppins-Regular";
+    src: url("../fonts/Poppins-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face{
+    font-family: "Poppins-SemiBold";
+    src: url("../fonts/Poppins-SemiBold.ttf");
+    font-weight: 600;
+    font-style: normal;
+}
