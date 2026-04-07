@@ -79,4 +79,5 @@ git clone https://github.com/xamiuez/landing-wallet.git
 cd landing-wallet
 ```
 
-**открыть `src/index.html` в браузере**adding: 80px 162px` ломается на мобиле
+
+**открыть `src/index.html` в браузере**
